@@ -11,18 +11,20 @@ public class UserInput {
 		String validDirection = null;
 		while (validInput == false) {
 			Scanner plrInput = new Scanner(System.in);
-			System.out.println("Input a direction!");
+			System.out.println("Input a direction:");
 			
 			String direction = plrInput.nextLine();
-			System.out.println(direction.toLowerCase());
+//			System.out.println(direction.toLowerCase());
 			
-			if (direction.toLowerCase().equals("w") || direction.toLowerCase().equals("a") || direction.toLowerCase().equals("s") || direction.toLowerCase().equals("d")) {
+			if (direction.toLowerCase().equals("w") || direction.toLowerCase().equals("a") || 
+					direction.toLowerCase().equals("s") || direction.toLowerCase().equals("d") ||
+					direction.toLowerCase().equals("q") || direction.toLowerCase().equals("x")) {
 				validDirection = direction.toLowerCase();
 				validInput = true;
-			}		
+			}
 		}
-		System.out.println("Valid Input Done");
-		//This will return either w, a, d or s based on user input
+		
+		//This will return either w, a, d, s, q, x based on user input
 		return (validDirection);
 
 	}
